@@ -1,0 +1,29 @@
+# Настройки IDE
+.idea/
+.vscode/
+.vs/
+*.iml
+
+# Каталоги сборки
+build/
+cmake-build-*/
+out/
+Debug/
+Release/
+x64/
+x86/
+
+# Скомпилированные файлы
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.lib
+*.pdb
+*.ilk
+
+# Временные файлы Windows
+Thumbs.db
+Desktop.ini
