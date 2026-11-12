@@ -27,3 +27,6 @@ x86/
 # Временные файлы Windows
 Thumbs.db
 Desktop.ini
+
+# Сгенерированная документация Doxygen
+/docs/
