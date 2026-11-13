@@ -1,0 +1,19 @@
+# ninja log v6
+109	5611	8162776387395210	CMakeFiles/Lab4.Library.dir/Lab4.Library/Person.cpp.obj	24929edc8d5c3cb5
+277	5946	8162776389195559	CMakeFiles/Lab4.Tests.dir/Lab4.Tests/PersonTests.cpp.obj	3bcdb5ac0749120b
+130	6361	8162776387590777	CMakeFiles/Lab4.Library.dir/Lab4.Library/Student.cpp.obj	9b33f0939c1d9467
+90	6379	8162776387204908	CMakeFiles/Lab4.Library.dir/Lab4.Library/LaboratoryWork.cpp.obj	1f171bf45c5fd956
+54	6463	8162776386839242	CMakeFiles/Lab4.Library.dir/Lab4.Library/Department.cpp.obj	d9f02751a59277bd
+379	7002	8162776390078164	CMakeFiles/Lab4.Tests.dir/Lab4.Tests/TeacherTests.cpp.obj	1e62b2499be8bd14
+357	7160	8162776389887649	CMakeFiles/Lab4.Tests.dir/Lab4.Tests/StudentTests.cpp.obj	558a422704143c59
+149	7279	8162776387786554	CMakeFiles/Lab4.Library.dir/Lab4.Library/Teacher.cpp.obj	afdc910ae1c2b143
+219	7394	8162776388488159	CMakeFiles/Lab4.Tests.dir/Lab4.Tests/DepartmentTests.cpp.obj	f083e6b899831e97
+243	7507	8162776388734727	CMakeFiles/Lab4.Tests.dir/Lab4.Tests/GroupTests.cpp.obj	57ea72dea3ef785
+72	7729	8162776387024597	CMakeFiles/Lab4.Library.dir/Lab4.Library/Group.cpp.obj	187ef01c1435a846
+398	8550	8162776390308721	CMakeFiles/Lab4.Tests.dir/Lab4.Tests/UniversityTests.cpp.obj	7976d759bebaab8
+168	9075	8162776387986997	CMakeFiles/Lab4.Library.dir/Lab4.Library/University.cpp.obj	647ccf161fed3802
+5626	9466	8162776442579884	CMakeFiles/Lab4.Tests.dir/Lab4.Tests/TestMain.cpp.obj	1d2a4fc975174ca0
+9076	11868	8162776477059419	libLab4.Library.a	bb15318a613b7c4
+11868	12738	8162776504980067	Lab4.Tests.exe	bfaa41febdb384fe
+191	23859	8162776388217641	CMakeFiles/Lab4.Console.dir/Lab4.Console/main.cpp.obj	52dfd7dda3c38644
+23865	24638	8162776624943629	Lab4.Console.exe	a542c00a19c359aa
