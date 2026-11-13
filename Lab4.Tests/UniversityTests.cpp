@@ -26,7 +26,7 @@ namespace
         const Student studentTwo("Alex", "Brown", "Lee", 21, "RB-2");
         const Student otherStudent("Sam", "Green", "Taylor", 19, "RB-3");
         const Teacher teacherOne("Chris", "White", "Morgan", { "Math" });
-        const Teacher teacherTwo("Jamie", "Black", "Jordan", { "Physics" });
+        const Teacher teacherTwo("Chris", "White", "Morgan", { "Physics" });
 
         return University(
             {
@@ -61,6 +61,10 @@ void TestUniversity()
     const std::vector<Student> studentsByName =
         university.FindStudentsByFullName("Brown", "Alex", "Lee");
     Lab4Tests::CheckEquals(studentsByName.size(), 2, "Full-name lookup should return all matching students");
+    Lab4Tests::CheckEquals(Lab4Tests::Equals(studentsByName[0].GetId(), studentsByName[1].GetId()),
+        false, "Students with the same full name must have distinct IDs");
+    Lab4Tests::CheckEquals(studentsByName[0].GetId(), foundStudent->GetId(),
+        "A copy returned by full-name lookup must preserve the student's ID");
     Lab4Tests::CheckEquals(university.FindStudentsByFullName("Missing", "Name", "Person").empty(), true,
         "Missing full name should return an empty list");
 
@@ -74,7 +78,9 @@ void TestUniversity()
     const std::vector<Teacher> teachers = university.GetTeachersByGroup("M-101");
     Lab4Tests::CheckEquals(teachers.size(), 2, "Group lookup should include the laboratory teachers without duplicates");
     Lab4Tests::CheckEquals(teachers[0].GetSurname(), "White", "Group lookup should include the laboratory teachers without duplicates");
-    Lab4Tests::CheckEquals(teachers[1].GetSurname(), "Black", "Group lookup should include the laboratory teachers without duplicates");
+    Lab4Tests::CheckEquals(teachers[1].GetSurname(), "White", "Group lookup should include teachers with the same full name");
+    Lab4Tests::CheckEquals(Lab4Tests::Equals(teachers[0].GetId(), teachers[1].GetId()),
+        false, "Teachers with the same full name must have distinct IDs");
 
     const LaboratoryWork& work = university.GetGroups().front().GetLaboratoryWorks().front();
     Lab4Tests::CheckEquals(work.GetCourse(), "Math", "A laboratory work should store its course and both teachers");
@@ -83,7 +89,7 @@ void TestUniversity()
     bool rejectedSameTeacher = false;
     try
     {
-        const LaboratoryWork invalidWork("Math", teachers[0], teachers[0]);
+        const LaboratoryWork invalidWork("Math", teachers[0], work.GetTeachers()[0]);
     }
     catch (const std::invalid_argument&)
     {

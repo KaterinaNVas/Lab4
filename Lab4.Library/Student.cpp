@@ -10,7 +10,7 @@ namespace Lab4
         const std::string& name,
         const std::string& surname,
         const std::string& patronymic,
-        int age,
+        const int age,
         const std::string& creditBookNumber)
         : Person(name, surname, patronymic),
         age_(age),
@@ -28,7 +28,7 @@ namespace Lab4
         return creditBookNumber_;
     }
 
-    void Student::SetAge(int age)
+    void Student::SetAge(const int age)
     {
         age_ = age;
     }
@@ -41,6 +41,7 @@ namespace Lab4
     std::string Student::GetInfo() const
     {
         return "Студент: " + GetSurname() + " " + GetName() + " " + GetPatronymic()
+            + ", ID: " + std::to_string(GetId())
             + ", возраст: " + std::to_string(age_)
             + ", зачётная книжка: " + creditBookNumber_;
     }

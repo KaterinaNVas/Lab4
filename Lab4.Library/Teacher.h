@@ -55,7 +55,7 @@ namespace Lab4
              */
             const std::vector<std::string>& GetCourses() const;
             /** @brief Формирует текстовое описание.
-             * @return Строка с ФИО и списком дисциплин, если он заполнен.
+             * @return Строка с ID и ФИО и списком дисциплин, если он заполнен.
              */
             std::string GetInfo() const override;
 

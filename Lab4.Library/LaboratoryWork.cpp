@@ -14,7 +14,7 @@ namespace Lab4
         const Teacher& secondTeacher)
         : course_(course), teachers_{ firstTeacher, secondTeacher }
     {
-        if (firstTeacher.HasSameFullName(secondTeacher))
+        if (firstTeacher.GetId() == secondTeacher.GetId())
         {
             throw std::invalid_argument("A laboratory work requires two distinct teachers");
         }

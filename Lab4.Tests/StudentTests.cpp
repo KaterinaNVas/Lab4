@@ -18,6 +18,7 @@ void TestStudent()
     Lab4Tests::CheckEquals(student.GetCreditBookNumber(), "RB-1", "Student record-book getter failed");
     Lab4Tests::CheckEquals(Lab4Tests::Equals(student.GetInfo().find("RB-1"), std::string::npos), false, "Student GetInfo failed");
 
+    const auto id = student.GetId();
     student.SetSurname("Green");
     student.SetAge(22);
     student.SetCreditBookNumber("RB-22");
@@ -29,6 +30,7 @@ void TestStudent()
         "Student GetInfo should display updated surname, name and patronymic");
 
     const Lab4::Student copiedStudent(student);
+    Lab4Tests::CheckEquals(copiedStudent.GetId(), id, "Copy must preserve the student ID");
     Lab4Tests::CheckEquals(copiedStudent.GetCreditBookNumber(), "RB-22", "Student copy constructor failed");
     Lab4::Student assignedStudent("Other", "Person", "Name", 18, "RB-18");
     assignedStudent = student;
@@ -38,5 +40,6 @@ void TestStudent()
     Lab4Tests::CheckEquals(movedStudent.GetCreditBookNumber(), "RB-22", "Student move constructor failed");
     Lab4::Student moveAssignedStudent("Other", "Person", "Name", 18, "RB-18");
     moveAssignedStudent = std::move(movedStudent);
+    Lab4Tests::CheckEquals(moveAssignedStudent.GetId(), id, "Move must preserve the student ID");
     Lab4Tests::CheckEquals(moveAssignedStudent.GetAge(), 22, "Student move assignment failed");
 }

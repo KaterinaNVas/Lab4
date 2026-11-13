@@ -4,6 +4,8 @@
 
 #pragma once
 
+#include <atomic>
+#include <cstdint>
 #include <string>
 
 namespace Lab4
@@ -25,13 +27,13 @@ namespace Lab4
         );
         /** @brief Создаёт объект копированием.
          */
+        /// @brief Копирует данные и ID того же человека.
         Person(const Person&) = default;
         /** @brief Присваивает данные копированием.
          * @return Ссылка на текущий объект.
          */
         Person& operator=(const Person&) = default;
         /** @brief Создаёт объект перемещением.
-         */
         Person(Person&&) noexcept = default;
         /** @brief Присваивает данные перемещением.
          * @return Ссылка на текущий объект.
@@ -40,6 +42,11 @@ namespace Lab4
         /** @brief Освобождает ресурсы объекта.
          */
         virtual ~Person() = default;
+
+        /** @brief Возвращает идентификатор человека в рамках запуска программы.
+         * @return ID, общий для всех копий записи о человеке.
+         */
+        std::uint64_t GetId() const;
 
         /** @brief Предоставляет имя.
          * @return Константная ссылка на имя.
@@ -77,6 +84,13 @@ namespace Lab4
         void SetPatronymic(const std::string& patronymic);
 
     private:
+        /// @brief Общий счётчик ID для Person и всех его наследников.
+        static std::atomic<std::uint64_t> nextId_;
+
+        /// @brief Идентификатор записи о человеке.
+        std::uint64_t id_;
+
+
         /** @brief Имя.
          */
         std::string name_;

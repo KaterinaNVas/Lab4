@@ -44,7 +44,7 @@ namespace Lab4
                 const std::string& name,
                 const std::string& surname,
                 const std::string& patronymic,
-                int age,
+                const int age,
                 const std::string& creditBookNumber
             );
             /** @brief Освобождает ресурсы объекта.
@@ -60,14 +60,14 @@ namespace Lab4
              */
             const std::string& GetCreditBookNumber() const;
             /** @brief Формирует текстовое описание.
-             * @return Строка с ФИО, возрастом и номером зачётной книжки.
+             * @return Строка с ID и ФИО, возрастом и номером зачётной книжки.
              */
             std::string GetInfo() const override;
 
             /** @brief Заменяет возраст.
              * @param age Возраст в полных годах.
              */
-            void SetAge(int age);
+            void SetAge(const int age);
             /** @brief Заменяет номер зачётной книжки.
              * @param creditBookNumber Номер зачётной книжки.
              */

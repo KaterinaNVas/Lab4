@@ -25,7 +25,8 @@ namespace Lab4
 
     std::string Teacher::GetInfo() const
     {
-        std::string info = "Преподаватель: " + GetSurname() + " " + GetName() + " " + GetPatronymic();
+        std::string info = "Преподаватель: " + GetSurname() + " " + GetName() + " " + GetPatronymic()
+            + ", ID: " + std::to_string(GetId());
         if (!courses_.empty())
         {
             info += ", дисциплины: ";

@@ -108,7 +108,7 @@ namespace Lab4
                         const bool alreadyListed = std::any_of(teachers.cbegin(), teachers.cend(),
                             [&teacher](const Teacher& listedTeacher)
                             {
-                                return listedTeacher.HasSameFullName(teacher);
+                                return listedTeacher.GetId() == teacher.GetId();
                             });
                         if (!alreadyListed)
                         {

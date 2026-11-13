@@ -6,14 +6,22 @@
 
 namespace Lab4
 {
+    std::atomic<std::uint64_t> Person::nextId_{1};
+
     Person::Person(
         const std::string& name,
         const std::string& surname,
         const std::string& patronymic)
-        : name_(name),
+        : id_(nextId_.fetch_add(1, std::memory_order_relaxed)),
+        name_(name),
         surname_(surname),
         patronymic_(patronymic)
     {
+    }
+
+    std::uint64_t Person::GetId() const
+    {
+        return id_;
     }
 
     const std::string& Person::GetName() const

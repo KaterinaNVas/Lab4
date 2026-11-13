@@ -20,7 +20,7 @@ namespace Lab4
          * @param course Название дисциплины.
          * @param firstTeacher Первый преподаватель.
          * @param secondTeacher Второй преподаватель.
-         * @throws std::invalid_argument Если ФИО преподавателей совпадают.
+         * @throws std::invalid_argument Если переданы две записи об одном преподавателе с одинаковым ID.
          */
         LaboratoryWork(
             const std::string& course,
