@@ -1,0 +1,25 @@
+Start testing: Nov 13 15:54 RTZ 2 (����)
+----------------------------------------------------------
+1/1 Testing: Lab4.Tests
+1/1 Test: Lab4.Tests
+Command: "C:/Университет/Языки программирования/Lab4/build-fresh/Lab4.Tests.exe"
+Directory: C:/Университет/Языки программирования/Lab4/build-fresh
+"Lab4.Tests" start time: Nov 13 15:54 RTZ 2 (����)
+Output:
+----------------------------------------------------------
+[PASS] Person
+[PASS] Student
+[PASS] Teacher
+[PASS] Department
+[PASS] Group
+[PASS] University
+All tests passed.
+<end of output>
+Test time =   0.43 sec
+----------------------------------------------------------
+Test Passed.
+"Lab4.Tests" end time: Nov 13 15:54 RTZ 2 (����)
+"Lab4.Tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 13 15:54 RTZ 2 (����)

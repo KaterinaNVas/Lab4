@@ -1,0 +1,14 @@
+PROJECT_NAME           = "Лабораторная работа 4 — ВУЗ"
+OUTPUT_DIRECTORY       = docs
+OUTPUT_LANGUAGE        = Russian
+INPUT                  = README.md Lab4.Library Lab4.Console Lab4.Tests
+INPUT_ENCODING         = UTF-8
+FILE_PATTERNS          = *.h *.cpp *.md
+USE_MDFILE_AS_MAINPAGE = README.md
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_ANON_NSPACES   = YES
+SOURCE_BROWSER         = YES
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+HAVE_DOT               = NO

@@ -1,0 +1,6 @@
+C:/Университет/Языки программирования/Lab4/build-fresh/CMakeFiles/Lab4.Library.dir
+C:/Университет/Языки программирования/Lab4/build-fresh/CMakeFiles/Lab4.Console.dir
+C:/Университет/Языки программирования/Lab4/build-fresh/CMakeFiles/Lab4.Tests.dir
+C:/Университет/Языки программирования/Lab4/build-fresh/CMakeFiles/test.dir
+C:/Университет/Языки программирования/Lab4/build-fresh/CMakeFiles/edit_cache.dir
+C:/Университет/Языки программирования/Lab4/build-fresh/CMakeFiles/rebuild_cache.dir
