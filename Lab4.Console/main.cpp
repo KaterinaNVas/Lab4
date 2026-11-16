@@ -4,7 +4,6 @@
 
 #include <iostream>
 #include <sstream>
-#include <memory>
 #include <string>
 #include <vector>
 
@@ -176,9 +175,8 @@ int main()
 		{ mathematicsDepartment, computerScienceDepartment },
 		{ softwareGroup, secondSoftwareGroup, dataGroup });
 
-	std::vector<std::unique_ptr<const Person>> people;
-	people.push_back(std::make_unique<Student>(firstStudent));
-	people.push_back(std::make_unique<Teacher>(programmingTeacher));
+	std::vector<const Student*> students{ &firstStudent };
+	std::vector<const Teacher*> teachers{ &programmingTeacher };
 
 	PrintMenu();
 	std::cout << std::flush;
@@ -285,9 +283,15 @@ int main()
 		break;
 	}
 	case MenuOption::ShowPeople:
-		for (const std::unique_ptr<const Person>& person : people)
+		std::cout << "Студенты:\n";
+		for (const Student* student : students)
 		{
-			std::cout << "  " << person->GetInfo() << '\n';
+			std::cout << "  " << student->GetInfo() << '\n';
+		}
+		std::cout << "Преподаватели:\n";
+		for (const Teacher* teacher : teachers)
+		{
+			std::cout << "  " << teacher->GetInfo() << '\n';
 		}
 		break;
 	case MenuOption::Exit:

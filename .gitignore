@@ -30,3 +30,5 @@ Desktop.ini
 
 # Сгенерированная документация Doxygen
 /docs/
+
+build-fresh/
